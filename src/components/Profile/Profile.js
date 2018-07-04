@@ -4,14 +4,15 @@ class Profile extends Component {
   render() {
     const { name, email, entries} = this.props.user;
     return(
-      <div className = "ba br4 mh5 shadow-5 bg--white-025 db" style = {{ height: 300 }} >
-        <div className = "fl w-third dib">
-          <img className = "center ba bw2 ma5 pa1 " style = {{width: 200, height: 200}} src = "http://i.imgur.com/oAUldaP.jpg" alt = "Profile Pic" />
+      <div className = "br4  shadow-5 bg--white-025 db" style = {{ height: 'auto' }} >
+        <div className = "fl w-50 pa2 db">
+          <img className = "center ba br-100 bw2 ma2 pa2 db " style = {{width: 200, height: 200}} src = "http://i.imgur.com/oAUldaP.jpg" alt = "Profile Pic" />
         </div>
-        <div className = "center fl w-two-thirds db ma5">
-          <h1><span>NAME:</span> {name} </h1>
-          <p> {email} </p>          
-          <p> 
+        <div className = "center fl w-50 db pa2">
+          <h1><span className = "f5">NAME:</span> {name} </h1>
+          <p><span className = "f5">EMAIL:</span> {email} </p>          
+          <p>
+            <span className = "f5">ENTRIES:</span> 
             {entries} 
           </p>          
         </div>
