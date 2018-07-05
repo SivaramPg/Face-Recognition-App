@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 export const Form = (props) => {
   return (
     <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-1 mw6 shadow-5 center">
@@ -111,6 +109,4 @@ export const RegisterLink = ({onRouteChange}) => {
     </div>
   );
 }
-
-// export default Form, FieldSet, Name, Email, Password, SignInButton, RegisterButton, RegisterLink;
 

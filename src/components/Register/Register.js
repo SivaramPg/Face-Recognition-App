@@ -1,5 +1,5 @@
 import React from "react";
-import  { Form, FieldSet, Name, Email, Password, RegisterButton } from '../Form/Form.js' 
+import  { Form, FieldSet, Name, Email, Password, RegisterButton } from '../Form/Form.js'; 
 
 class Register extends React.Component {
   constructor(props) {
