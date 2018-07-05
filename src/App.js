@@ -48,13 +48,14 @@ const initialState = {
     joined: ""
   }
 };
+
 class App extends Component {
   constructor() {
     super();
     this.state = initialState;
   }
 
-  loadUser = data => {
+  loadUser = (data) => {
     this.setState({
       user: {
         id: data.id,
@@ -66,7 +67,7 @@ class App extends Component {
     });
   };
 
-  calculateFaceLocation = data => {
+  calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById("inputImage");
     const width = Number(image.width);
@@ -79,15 +80,15 @@ class App extends Component {
     };
   };
 
-  displayFaceBox = box => {
+  displayFaceBox = (box) => {
     this.setState({ box: box });
   };
 
-  onInputChange = event => {
+  onInputChange = (event) => {
     this.setState({ input: event.target.value });
   };
 
-  onEnter = event => {
+  onEnter = (event) => {
     if (event.key === "Enter") {
       this.onButtonSubmit();
     }
@@ -118,7 +119,7 @@ class App extends Component {
       .catch(err => console.log(err));
   };
 
-  onRouteChange = route => {
+  onRouteChange = (route) => {
     if (route === "signout") {
       this.setState(initialState);
     } else if (route === "home") {
@@ -128,23 +129,24 @@ class App extends Component {
   };
 
   render() {
+    const { isSignedIn, route, user, box, imageUrl } = this.state;
     return (
       <div className="App">
         <Particles className="particles" params={particlesOptions} />
         <Navigation
-          isSignedIn={this.state.isSignedIn}
+          isSignedIn={isSignedIn}
           onRouteChange={this.onRouteChange}
-          route={this.state.route}
+          route={route}
         />
-        {this.state.route === "home" || this.state.route === "profile" 
+        {route === "home" || route === "profile" 
         ? (
-          this.state.route === "home" 
+          route === "home" 
           ? (
               <div>
                 <Logo />
                 <Rank
-                  name={this.state.user.name}
-                  entries={this.state.user.entries}
+                  name={user.name}
+                  entries={user.entries}
                 />
                 <ImageLinkForm
                   onInputChange={this.onInputChange}
@@ -152,16 +154,16 @@ class App extends Component {
                   onButtonSubmit={this.onButtonSubmit}
                 />
                 <FaceRecognition
-                  box={this.state.box}
-                  imageUrl={this.state.imageUrl}
+                  box={box}
+                  imageUrl={imageUrl}
                 />
               </div>
             ) 
           : (
-              <Profile user={this.state.user} />
+              <Profile user={user} />
             )
         ) 
-        : this.state.route === "signin" 
+        : route === "signin" 
         ? (
           <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
           ) 
