@@ -131,7 +131,7 @@ import './App.css';
       <Particles className = 'particles' 
         params={particlesOptions}
       />
-      <Navigation isSignedIn = {this.state.isSignedIn} onRouteChange = {this.onRouteChange} />
+      <Navigation isSignedIn = {this.state.isSignedIn} onRouteChange = {this.onRouteChange} route = { this.state.route }/>
       {this.state.route === 'home' || this.state.route === 'profile'
       ? (
         this.state.route === 'home'
