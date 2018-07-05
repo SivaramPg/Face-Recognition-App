@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import Clarifai from "clarifai";
 import Particles from "react-particles-js";
-import Navigation from "./components/navigation/Navigation";
-import SignIn from "./components/SignIn/SignIn";
-import Register from "./components/Register/Register";
-import Logo from "./components/Logo/Logo";
-import Rank from "./components/Rank/Rank";
-import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
-import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
-import Profile from "./components/Profile/Profile";
+import Navigation from "../components/navigation/Navigation";
+import SignIn from "../components/SignIn/SignIn";
+import Register from "../components/Register/Register";
+import Logo from "../components/Logo/Logo";
+import Rank from "../components/Rank/Rank";
+import ImageLinkForm from "../components/ImageLinkForm/ImageLinkForm";
+import FaceRecognition from "../components/FaceRecognition/FaceRecognition";
+import Profile from "../components/Profile/Profile";
 import "./App.css";
 
 const app = new Clarifai.App({
