@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Clarifai from "clarifai";
 import Particles from "react-particles-js";
 import Navigation from "../components/navigation/Navigation";
 import SignIn from "../components/SignIn/SignIn";
