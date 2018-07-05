@@ -1,5 +1,12 @@
 import React from "react";
-import  { Form, FieldSet, Email, Password, SignInButton, RegisterLink } from '../Form/Form.js'; 
+import {
+  Form,
+  FieldSet,
+  Email,
+  Password,
+  SignInButton,
+  RegisterLink
+} from "../Form/Form.js";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -7,14 +14,14 @@ class SignIn extends React.Component {
     this.state = {
       signInEmail: "",
       signInPassword: ""
-    }
+    };
   }
 
-  onEmailChange = (event) => {
+  onEmailChange = event => {
     this.setState({ signInEmail: event.target.value });
   };
 
-  onPasswordChange = (event) => {
+  onPasswordChange = event => {
     this.setState({ signInPassword: event.target.value });
   };
 
@@ -33,20 +40,20 @@ class SignIn extends React.Component {
           this.props.loadUser(user);
           this.props.onRouteChange("home");
         }
-      })
-  }
+      });
+  };
 
   render() {
     const { onRouteChange } = this.props;
     return (
       <Form>
-      <legend className="f1 fw6 ph0 mh0">Sign In</legend>
+        <legend className="f1 fw6 ph0 mh0">Sign In</legend>
         <FieldSet>
-          <Email onEmailChange = {this.onEmailChange}/>
-          <Password onPasswordChange = {this.onPasswordChange}/>
+          <Email onEmailChange={this.onEmailChange} />
+          <Password onPasswordChange={this.onPasswordChange} />
         </FieldSet>
-        <SignInButton onSubmitSignIn = {this.onSubmitSignIn} />
-        <RegisterLink onRouteChange = {onRouteChange} />
+        <SignInButton onSubmitSignIn={this.onSubmitSignIn} />
+        <RegisterLink onRouteChange={onRouteChange} />
       </Form>
     );
   }
