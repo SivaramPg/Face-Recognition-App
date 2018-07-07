@@ -7,7 +7,7 @@ const FaceRecognition = ({ imageUrl, box }) => {
   let displayFaceCount;
   if(box.length) {
     faceCount = box.length;
-    displayFaceCount = `The number of faces detected in the image are: ${faceCount}`;
+    displayFaceCount = `${faceCount} faces have been detected in this image.`;
     mappedBox = box.map((singleBox, id) => {
       return (
         <div
