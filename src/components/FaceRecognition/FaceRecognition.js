@@ -3,7 +3,11 @@ import "./FaceRecognition.css";
 
 const FaceRecognition = ({ imageUrl, box }) => {
   let mappedBox;
+  let faceCount;
+  let displayFaceCount;
   if(box.length) {
+    faceCount = box.length;
+    displayFaceCount = `The number of faces detected in the image are: ${faceCount}`;
     mappedBox = box.map((singleBox, id) => {
       return (
         <div
@@ -18,10 +22,13 @@ const FaceRecognition = ({ imageUrl, box }) => {
         />
       );
     })
+  } else {
+    displayFaceCount = "";
   }
+
   return (
     <div className="center ma">
-      <div className="absolute mt2">
+      <div className="absolute mt4">
         <img
           id="inputImage"
           src={imageUrl}
@@ -33,6 +40,7 @@ const FaceRecognition = ({ imageUrl, box }) => {
            { mappedBox }
         </div>
       </div>
+      <div className = "mt1 f4">{displayFaceCount}</div>
     </div>
   )
 }
