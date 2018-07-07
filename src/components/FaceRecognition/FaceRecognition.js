@@ -2,9 +2,9 @@ import React from "react";
 import "./FaceRecognition.css";
 
 const FaceRecognition = ({ imageUrl, box }) => {
-  let mappedBox;
   let faceCount;
   let displayFaceCount;
+  let mappedBox;
   if(box.length) {
     faceCount = box.length;
     displayFaceCount = `${faceCount} faces have been detected in this image.`;
