@@ -3,6 +3,7 @@
   box-shadow: 0 0 0 3px #149ef2 inset;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   cursor: pointer;
 }

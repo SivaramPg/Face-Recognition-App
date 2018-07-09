@@ -1,5 +1,9 @@
 .Tilt {
-  background: linear-gradient(346deg, rgba(3,242,187,0.9), rgba(121,17,233,0.5));
+  background: linear-gradient(
+    346deg,
+    rgba(3, 242, 187, 0.9),
+    rgba(121, 17, 233, 0.5)
+  );
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

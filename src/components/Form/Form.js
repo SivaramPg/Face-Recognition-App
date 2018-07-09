@@ -1,31 +1,29 @@
-import React from 'react';
+import React from "react";
 
-export const Form = (props) => {
+export const Form = props => {
   return (
     <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-1 mw6 shadow-5 center">
       <main className="pa4 black-80">
-        <form className="measure">
-         { props.children }
-        </form>
+        <form className="measure">{props.children}</form>
       </main>
     </article>
   );
-}
+};
 
-export const FieldSet = (props) => {
+export const FieldSet = props => {
   return (
     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-    { props.children }
+      {props.children}
     </fieldset>
   );
-}
+};
 
-export const Name = ( { onNameChange } ) => {
+export const Name = ({ onNameChange }) => {
   return (
     <div className="mt3">
       <label className="db fw6 lh-copy f6" htmlFor="name">
         Name
-        </label>
+      </label>
       <input
         className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
         type="text"
@@ -35,14 +33,14 @@ export const Name = ( { onNameChange } ) => {
       />
     </div>
   );
-}
+};
 
-export const Email = ({onEmailChange}) => {
+export const Email = ({ onEmailChange }) => {
   return (
     <div className="mt3">
       <label className="db fw6 lh-copy f6" htmlFor="email-address">
         Email
-        </label>
+      </label>
       <input
         className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
         type="email"
@@ -52,9 +50,9 @@ export const Email = ({onEmailChange}) => {
       />
     </div>
   );
-}
+};
 
-export const Password = ({onPasswordChange}) => {
+export const Password = ({ onPasswordChange }) => {
   return (
     <div className="mv3">
       <label className="db fw6 lh-copy f6" htmlFor="password">
@@ -69,9 +67,9 @@ export const Password = ({onPasswordChange}) => {
       />
     </div>
   );
-}
+};
 
-export const SignInButton = ({onSubmitSignIn}) => {
+export const SignInButton = ({ onSubmitSignIn }) => {
   return (
     <div className="">
       <input
@@ -82,9 +80,9 @@ export const SignInButton = ({onSubmitSignIn}) => {
       />
     </div>
   );
-}
+};
 
-export const RegisterButton = ({onSubmitSignIn}) => {
+export const RegisterButton = ({ onSubmitSignIn }) => {
   return (
     <div className="">
       <input
@@ -95,9 +93,9 @@ export const RegisterButton = ({onSubmitSignIn}) => {
       />
     </div>
   );
-}
+};
 
-export const RegisterLink = ({onRouteChange}) => {
+export const RegisterLink = ({ onRouteChange }) => {
   return (
     <div className="lh-copy mt3">
       <p
@@ -108,5 +106,4 @@ export const RegisterLink = ({onRouteChange}) => {
       </p>
     </div>
   );
-}
-
+};

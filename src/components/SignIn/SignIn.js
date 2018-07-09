@@ -17,11 +17,11 @@ class SignIn extends React.Component {
     };
   }
 
-  onEmailChange = (event) => {
+  onEmailChange = event => {
     this.setState({ signInEmail: event.target.value });
   };
 
-  onPasswordChange = (event) => {
+  onPasswordChange = event => {
     this.setState({ signInPassword: event.target.value });
   };
 
