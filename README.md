@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/028a2f01-fad2-4c90-8e67-da9c39a107df/deploy-status)](https://app.netlify.com/sites/clarifai-face-app/deploys)
+
 # [_Face-Recognition-App_](https://facerecognition-smart-brain.herokuapp.com)
 
 A **CRUD** based **REACT APP** Built using create-react-app as a final project for the Udemy course **_Zero to Mastery: The Complete Web Developer in 2018_**  A fully functional full-stack web application designed using React.js for the front end , Node.js for the back end and a PostgreSQL database all deployed on Heroku
