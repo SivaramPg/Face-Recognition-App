@@ -117,7 +117,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch("https://still-coast-12669.herokuapp.com/imageurl", {
+    fetch("https://faceapp.sivarampg.com/api/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -127,7 +127,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch("https://still-coast-12669.herokuapp.com/image", {
+          fetch("https://faceapp.sivarampg.com/api/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
