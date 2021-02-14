@@ -1,13 +1,13 @@
-import React from "react";
-import "./FaceRecognition.css";
+import React from 'react';
+import './FaceRecognition.css';
 
 const FaceRecognition = ({ imageUrl, box, demographicData }) => {
   let faceCount;
   let displayFaceCount;
   let mappedBox;
-  let age = "";
-  let gender = "";
-  let culture = "";
+  let age = '';
+  let gender = '';
+  let culture = '';
   if (box.length === 1) {
     age = demographicData.age;
     gender = demographicData.gender;
@@ -25,13 +25,13 @@ const FaceRecognition = ({ imageUrl, box, demographicData }) => {
             top: singleBox.topRow,
             right: singleBox.rightCol,
             bottom: singleBox.bottomRow,
-            left: singleBox.leftCol
+            left: singleBox.leftCol,
           }}
         />
       );
     });
   } else {
-    displayFaceCount = "";
+    displayFaceCount = '';
   }
 
   return (
@@ -50,7 +50,7 @@ const FaceRecognition = ({ imageUrl, box, demographicData }) => {
       </div>
       <div className="mt1 f3">{displayFaceCount}</div>
       <div className="mt1 f3">
-        {"Age:" + age + ", Gender:" + gender + ", Culture:" + culture}
+        {'Age:' + age + ', Gender:' + gender + ', Culture:' + culture}
       </div>
     </div>
   );

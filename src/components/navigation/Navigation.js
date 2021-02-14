@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
 const Navigation = ({ onRouteChange, isSignedIn, route }) => {
   if (isSignedIn) {
-    if (route === "home") {
+    if (route === 'home') {
       return (
-        <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+        <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <p
-            onClick={() => onRouteChange("profile")}
+            onClick={() => onRouteChange('profile')}
             className="f3 link dim black underline pa3 pointer"
           >
             Profile
           </p>
           <p
-            onClick={() => onRouteChange("signout")}
+            onClick={() => onRouteChange('signout')}
             className="f3 link dim black underline pa3 pointer"
           >
             Sign Out
@@ -21,15 +21,15 @@ const Navigation = ({ onRouteChange, isSignedIn, route }) => {
       );
     } else {
       return (
-        <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+        <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <p
-            onClick={() => onRouteChange("home")}
+            onClick={() => onRouteChange('home')}
             className="f3 link dim black underline pa3 pointer"
           >
             Home
           </p>
           <p
-            onClick={() => onRouteChange("signout")}
+            onClick={() => onRouteChange('signout')}
             className="f3 link dim black underline pa3 pointer"
           >
             Sign Out
@@ -39,15 +39,15 @@ const Navigation = ({ onRouteChange, isSignedIn, route }) => {
     }
   } else {
     return (
-      <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+      <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
         <p
-          onClick={() => onRouteChange("signin")}
+          onClick={() => onRouteChange('signin')}
           className="f3 link dim black underline pa3 pointer"
         >
           Sign In
         </p>
         <p
-          onClick={() => onRouteChange("register")}
+          onClick={() => onRouteChange('register')}
           className="f3 link dim black underline pa3 pointer"
         >
           Register

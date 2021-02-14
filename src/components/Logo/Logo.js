@@ -1,7 +1,7 @@
-import React from "react";
-import Tilt from "react-tilt";
-import "./Logo.css";
-import LogoImg from "./mylogowixsquare.jpg";
+import React from 'react';
+import Tilt from 'react-tilt';
+import './Logo.css';
+import LogoImg from './mylogowixsquare.jpg';
 
 const Logo = () => {
   return (

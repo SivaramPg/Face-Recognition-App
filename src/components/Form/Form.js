@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export const Form = props => {
+export const Form = (props) => {
   return (
     <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-1 mw6 shadow-5 center">
       <main className="pa4 black-80">
@@ -10,7 +10,7 @@ export const Form = props => {
   );
 };
 
-export const FieldSet = props => {
+export const FieldSet = (props) => {
   return (
     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
       {props.children}
@@ -99,7 +99,7 @@ export const RegisterLink = ({ onRouteChange }) => {
   return (
     <div className="lh-copy mt3">
       <p
-        onClick={() => onRouteChange("register")}
+        onClick={() => onRouteChange('register')}
         className="f6 link dim black db pointer"
       >
         Register

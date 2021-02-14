@@ -1,44 +1,44 @@
-import React from "react";
+import React from 'react';
 import {
   Form,
   FieldSet,
   Email,
   Password,
   SignInButton,
-  RegisterLink
-} from "../Form/Form.js";
+  RegisterLink,
+} from '../Form/Form.js';
 
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      signInEmail: "",
-      signInPassword: ""
+      signInEmail: '',
+      signInPassword: '',
     };
   }
 
-  onEmailChange = event => {
+  onEmailChange = (event) => {
     this.setState({ signInEmail: event.target.value });
   };
 
-  onPasswordChange = event => {
+  onPasswordChange = (event) => {
     this.setState({ signInPassword: event.target.value });
   };
 
   onSubmitSignIn = () => {
-    fetch("https://faceapp.sivarampg.com/api/signin", {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
+    fetch('https://faceapp.sivarampg.com/api/signin', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: this.state.signInEmail,
-        password: this.state.signInPassword
-      })
+        password: this.state.signInPassword,
+      }),
     })
-      .then(response => response.json())
-      .then(user => {
+      .then((response) => response.json())
+      .then((user) => {
         if (user.id) {
           this.props.loadUser(user);
-          this.props.onRouteChange("home");
+          this.props.onRouteChange('home');
         }
       });
   };

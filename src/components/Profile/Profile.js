@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Profile extends Component {
   render() {
@@ -19,10 +19,10 @@ class Profile extends Component {
         </div>
         <div className="center fl w-50 db ma4 pa5 bg-white br4 shadow-5 grow">
           <p>
-            <span className="f3">NAME:</span> {name}{" "}
+            <span className="f3">NAME:</span> {name}{' '}
           </p>
           <p>
-            <span className="f3">EMAIL:</span> {email}{" "}
+            <span className="f3">EMAIL:</span> {email}{' '}
           </p>
           <p>
             <span className="f3"> ENTRIES: </span>
